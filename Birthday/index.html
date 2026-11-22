@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Raza 🎀</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+        :root {
+            --bg-cream: #fdf6f0;
+            --vintage-pink: #f4d8dc;
+            --dusty-rose: #d89ca4;
+            --deep-rose: #9e5a63;
+            --gold-accent: #c5a059;
+            --lace-white: #fffaf7;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-cream);
+            background-image: radial-gradient(var(--dusty-rose) 0.5px, transparent 0.5px), radial-gradient(var(--dusty-rose) 0.5px, var(--bg-cream) 0.5px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            font-family: 'Amiri', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            color: var(--deep-rose);
+        }
+
+        /* إطار البطاقة الرئيسية */
+        .vintage-card {
+            background: var(--lace-white);
+            border: 2px solid var(--dusty-rose);
+            outline: 6px solid var(--lace-white);
+            box-shadow: 0 15px 35px rgba(158, 90, 99, 0.16), inset 0 0 20px rgba(244, 216, 220, 0.45);
+            border-radius: 25px;
+            padding: 32px 24px;
+            max-width: 440px;
+            width: 92%;
+            position: relative;
+            z-index: 10;
+            transition: all 0.5s ease;
+        }
+
+        .vintage-card::before {
+            content: "✦ ─── ❁ ─── ✦";
+            display: block;
+            color: var(--gold-accent);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            letter-spacing: 3px;
+        }
+
+        .eng-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2.2rem;
+            color: var(--deep-rose);
+            margin: 0;
+        }
+
+        .ar-subtitle {
+            font-size: 1.2rem;
+            color: #8a5a60;
+            margin: 6px 0 20px 0;
+        }
+
+        /* الأزرار الفينتج */
+        .btn-vintage {
+            background: var(--vintage-pink);
+            border: 1px solid var(--dusty-rose);
+            color: var(--deep-rose);
+            font-family: 'Amiri', serif;
+            font-size: 1.05rem;
+            padding: 7px 20px;
+            border-radius: 22px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(216, 156, 164, 0.2);
+            margin: 5px;
+            display: inline-block;
+        }
+
+        .btn-vintage:hover {
+            background: var(--dusty-rose);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: var(--deep-rose);
+            color: #fffaf7;
+            border: 1px solid var(--deep-rose);
+        }
+
+        .btn-primary:hover {
+            background: #7f444c;
+        }
+
+        /* ================= القسم الأول: الكيكة ================= */
+        .cake-stage {
+            position: relative;
+            width: 240px;
+            height: 210px;
+            margin: 18px auto 10px auto;
+        }
+
+        .cake-stand-top {
+            width: 260px;
+            height: 12px;
+            background: #f7e6e8;
+            border: 1px solid var(--dusty-rose);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 22px;
+            left: -10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .cake-stand-base {
+            width: 90px;
+            height: 24px;
+            background: linear-gradient(to right, #edd5d8, #fff, #edd5d8);
+            border: 1px solid var(--dusty-rose);
+            border-radius: 5px 5px 15px 15px;
+            position: absolute;
+            bottom: 0;
+            left: 75px;
+        }
+
+        .layer {
+            position: absolute;
+            border-radius: 12px 12px 4px 4px;
+            box-shadow: inset 0 -4px 0 rgba(158, 90, 99, 0.12);
+        }
+
+        .layer-bottom {
+            width: 210px;
+            height: 68px;
+            bottom: 30px;
+            left: 15px;
+            background: #f7cad0;
+            border: 1px solid #e5b3ba;
+        }
+
+        .layer-top {
+            width: 165px;
+            height: 58px;
+            bottom: 98px;
+            left: 37.5px;
+            background: #fae0e4;
+            border: 1px solid #e5b3ba;
+        }
+
+        .piping {
+            position: absolute;
+            bottom: -4px;
+            width: 100%;
+            height: 10px;
+            background-image: radial-gradient(circle, #fffaf7 5px, transparent 6px);
+            background-size: 14px 10px;
+        }
+
+        .bow {
+            position: absolute;
+            font-size: 1.1rem;
+            top: 22px;
+        }
+
+        .pearl {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #fff;
+            border: 1px solid var(--gold-accent);
+            border-radius: 50%;
+            top: 12px;
+        }
+
+        .candles {
+            position: absolute;
+            bottom: 156px;
+            width: 120px;
+            left: 60px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .candle {
+            width: 10px;
+            height: 42px;
+            background: repeating-linear-gradient(45deg, #fffaf7, #fffaf7 4px, var(--dusty-rose) 4px, var(--dusty-rose) 8px);
+            border: 1px solid #c98a93;
+            border-radius: 3px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .flame {
+            width: 12px;
+            height: 20px;
+            background: radial-gradient(ellipse at bottom, #fff 0%, #ffe599 45%, #e69138 95%);
+            border-radius: 50% 50% 20% 20%;
+            position: absolute;
+            top: -22px;
+            left: -2px;
+            box-shadow: 0 0 12px #ffe599, 0 0 22px #f6b26b;
+            animation: flicker 0.7s infinite alternate;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .flame.out {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        @keyframes flicker {
+            0% { transform: scale(1) rotate(-1.5deg); }
+            100% { transform: scale(1.08) rotate(1.5deg); }
+        }
+
+        .cake-wish-box {
+            margin-top: 18px;
+            padding: 16px;
+            background: var(--bg-cream);
+            border: 1px dashed var(--gold-accent);
+            border-radius: 15px;
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .cake-wish-box.show {
+            display: block;
+        }
+
+        /* ================= القسم الثاني: المظروف والرسالة ================= */
+        .hidden {
+            display: none !important;
+        }
+
+        .envelope-wrapper {
+            position: relative;
+            width: 280px;
+            height: 185px;
+            margin: 20px auto;
+            cursor: pointer;
+        }
+
+        .envelope {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: var(--vintage-pink);
+            border: 2px solid var(--dusty-rose);
+            border-radius: 12px;
+            box-shadow: 0 12px 25px rgba(158, 90, 99, 0.16);
+        }
+
+        .flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #edd0d5;
+            clip-path: polygon(0 0, 50% 58%, 100% 0);
+            transform-origin: top;
+            transition: transform 0.7s ease;
+            z-index: 4;
+        }
+
+        .pocket {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--vintage-pink);
+            clip-path: polygon(0 100%, 0 35%, 50% 65%, 100% 35%, 100% 100%);
+            z-index: 3;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .wax-seal {
+            position: absolute;
+            top: 46%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 46px;
+            height: 46px;
+            background: radial-gradient(circle at 30% 30%, #b86b75, #8c4851);
+            border: 2px solid var(--gold-accent);
+            border-radius: 50%;
+            color: #fffaf7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 5;
+            transition: all 0.4s ease;
+        }
+
+        .envelope-wrapper.open .flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+
+        .envelope-wrapper.open .wax-seal {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+
+        /* محتوى الرسالة الطويلة وبطاقات الذكريات */
+        .full-letter-content {
+            text-align: right;
+            background: var(--bg-cream);
+            border: 1px solid #e6c5ca;
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 15px;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .full-letter-content h3 {
+            text-align: center;
+            margin: 0 0 12px 0;
+            font-size: 1.4rem;
+            color: var(--deep-rose);
+        }
+
+        .full-letter-content p {
+            font-size: 1.15rem;
+            line-height: 1.85;
+            color: #633d42;
+            margin: 0 0 14px 0;
+        }
+
+        /* بطاقات صغيرة تفاعلية داخل الرسالة */
+        .mini-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 18px 0;
+        }
+
+        .memory-card {
+            background: var(--lace-white);
+            border: 1px dashed var(--dusty-rose);
+            border-radius: 12px;
+            padding: 10px 14px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .memory-card:hover {
+            background: #f9ebed;
+        }
+
+        .memory-title {
+            font-weight: bold;
+            color: var(--deep-rose);
+            font-size: 1.1rem;
+        }
+
+        .memory-text {
+            display: none;
+            margin-top: 6px;
+            font-size: 1.05rem;
+            color: #6d4348;
+            line-height: 1.6;
+        }
+
+        .memory-card.revealed .memory-text {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .petal {
+            position: fixed;
+            top: -20px;
+            pointer-events: none;
+            animation: fall linear forwards;
+            z-index: 30;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(105vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="vintage-card">
+        <!-- زر الموسيقى المشترك بين القسمين -->
+        <button class="btn-vintage" id="musicBtn" onclick="togglePiano()">🎹 تشغيل موسيقى البيانو</button>
+
+        <!-- ================= القسم 1: الكيكة ================= -->
+        <div id="cakeSection">
+            <h1 class="eng-title">Happy Birthday, Raza</h1>
+            <p class="ar-subtitle">تمنّي أمنية جميلة واضغطي على الشموع لإطفائها 🕯️</p>
+
+            <div class="cake-stage">
+                <div class="candles">
+                    <div class="candle" onclick="blowOut(this)"><div class="flame"></div></div>
+                    <div class="candle" onclick="blowOut(this)"><div class="flame"></div></div>
+                    <div class="candle" onclick="blowOut(this)"><div class="flame"></div></div>
+                </div>
+
+                <div class="layer layer-top">
+                    <div class="pearl" style="left: 20px;"></div>
+                    <div class="pearl" style="left: 55px;"></div>
+                    <div class="pearl" style="left: 105px;"></div>
+                    <div class="pearl" style="left: 140px;"></div>
+                    <div class="bow" style="left: 72px;">🎀</div>
+                    <div class="piping"></div>
+                </div>
+
+                <div class="layer layer-bottom">
+                    <div class="bow" style="left: 25px;">🎀</div>
+                    <div class="bow" style="left: 95px;">🎀</div>
+                    <div class="bow" style="left: 165px;">🎀</div>
+                    <div class="piping"></div>
+                </div>
+
+                <div class="cake-stand-top"></div>
+                <div class="cake-stand-base"></div>
+            </div>
+
+            <!-- رسالة أولى تظهر فور إطفاء الشموع -->
+            <div class="cake-wish-box" id="cakeWishBox">
+                <p style="font-size: 1.2rem; margin: 0 0 12px 0; color: #6d4348;">
+                    انطفأت الشموع، ولكن نور وجودكِ في حياتي لا ينطفئ أبداً ✨
+                </p>
+                <button class="btn-vintage btn-primary" onclick="goToEnvelope()">افتحي رسالتكِ الخاصة 💌</button>
+            </div>
+        </div>
+
+        <!-- ================= القسم 2: المظروف والرسالة ================= -->
+        <div id="envelopeSection" class="hidden">
+            <h1 class="eng-title">A Letter for Raza</h1>
+            <p class="ar-subtitle" id="envelopeHint">اضغطي على الختم الذهبي لفتح الرسالة 💌</p>
+
+            <div class="envelope-wrapper" id="envelopeWrapper" onclick="openEnvelope()">
+                <div class="envelope">
+                    <div class="flap"></div>
+                    <div class="wax-seal">✿</div>
+                    <div class="pocket"></div>
+                </div>
+            </div>
+
+            <!-- نص الرسالة الكاملة وبطاقات الذكريات -->
+            <div class="full-letter-content hidden" id="fullLetter">
+                <h3>إلى صديقتي المفضلة، Raza 🌷</h3>
+                <p>
+                    كل عام وأنتِ بخير يا أجمل صدفة وألطف روح. في يوم ميلادكِ، أردتُ أن أصنع لكِ شيئاً صغيراً يشبه رقتكِ ويبقى ذكرى بيننا.
+                </p>
+                <p>
+                    أنتِ لستِ مجرد صديقة، بل أنتِ الأمان والضحكة الصادقة التي تُهوّن ثقل الأيام. وجودكِ بجانبي هو من أعظم النعم التي أشكر الله عليها دائماً.
+                </p>
+
+                <!-- 3 بطاقات تفاعلية تضغط عليها -->
+                <div class="mini-cards">
+                    <div class="memory-card" onclick="this.classList.toggle('revealed')">
+                        <div class="memory-title">✨ أكثر ما أحبه فيكِ (اضغطي هنا)</div>
+                        <div class="memory-text">نقاء قلبكِ، ولطفكِ الذي يترك أثراً جميلاً في كل مكان تذهبين إليه.</div>
+                    </div>
+                    <div class="memory-card" onclick="this.classList.toggle('revealed')">
+                        <div class="memory-title">🌸 أمنيتي لكِ هذا العام (اضغطي هنا)</div>
+                        <div class="memory-text">أن تتحقق كل أحلامكِ الكبيرة والصغيرة، وأن يرزقكِ الله راحة البال وسعادة لا تنتهي.</div>
+                    </div>
+                    <div class="memory-card" onclick="this.classList.toggle('revealed')">
+                        <div class="memory-title">🤍 وعد صداقتنا (اضغطي هنا)</div>
+                        <div class="memory-text">أن نبقى معاً في كل الأوقات، نحتفل بنجاحاتنا ونتجاوز معاً كل الصعاب.</div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; font-weight: bold; margin-top: 10px;">
+                    كل عام وأنتِ بألف خير يا Raza 🎀
+                </p>
+
+                <div style="text-align: center; margin-top: 15px;">
+                    <button class="btn-vintage" onclick="dropVintagePetals(35)">🌸 نثر الورود</button>
+                    <button class="btn-vintage" onclick="goToCake()">🎂 العودة للكيكة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let candlesLeft = 3;
+        let audioCtx = null;
+        let isPlaying = false;
+        let melodyTimeout = null;
+
+        // نغمة بيانو هادئة وناعمة بصوت واضح وسرعة معتدلة
+        function playSoftPianoNote(freq, duration, time, volume = 0.28) {
+            if (!audioCtx) return;
+
+            const osc = audioCtx.createOscillator();
+            const overtone = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            const overGain = audioCtx.createGain();
+            const filter = audioCtx.createBiquadFilter();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(freq, time);
+
+            overtone.type = 'triangle';
+            overtone.frequency.setValueAtTime(freq * 2, time);
+
+            filter.type = 'lowpass';
+            filter.frequency.setValueAtTime(1600, time);
+
+            gain.gain.setValueAtTime(0.001, time);
+            gain.gain.linearRampToValueAtTime(volume, time + 0.025);
+            gain.gain.exponentialRampToValueAtTime(0.0008, time + duration);
+
+            overGain.gain.setValueAtTime(0.001, time);
+            overGain.gain.linearRampToValueAtTime(volume * 0.14, time + 0.02);
+            overGain.gain.exponentialRampToValueAtTime(0.0005, time + duration * 0.55);
+
+            osc.connect(filter);
+            overtone.connect(overGain);
+            overGain.connect(filter);
+            filter.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start(time);
+            overtone.start(time);
+            osc.stop(time + duration + 0.04);
+            overtone.stop(time + duration + 0.04);
+        }
+
+        
+        function startBirthdayMelody() {
+            if (!audioCtx) {
+                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            isPlaying = true;
+            document.getElementById('musicBtn').innerText = "⏸️ إيقاف الموسيقى";
+
+            const notes = [
+                { f: 261.63, d: 0.55, t: 0.00, v: 0.26 },
+                { f: 261.63, d: 0.55, t: 0.34, v: 0.26 },
+                { f: 293.66, d: 0.85, t: 0.68, v: 0.29 },
+                { f: 261.63, d: 0.85, t: 1.32, v: 0.29 },
+                { f: 349.23, d: 0.85, t: 1.96, v: 0.29 },
+                { f: 329.63, d: 1.35, t: 2.60, v: 0.31 },
+
+                { f: 261.63, d: 0.55, t: 3.85, v: 0.26 },
+                { f: 261.63, d: 0.55, t: 4.19, v: 0.26 },
+                { f: 293.66, d: 0.85, t: 4.53, v: 0.29 },
+                { f: 261.63, d: 0.85, t: 5.17, v: 0.29 },
+                { f: 392.00, d: 0.85, t: 5.81, v: 0.29 },
+                { f: 349.23, d: 1.35, t: 6.45, v: 0.31 },
+
+                { f: 261.63, d: 0.55, t: 7.70, v: 0.26 },
+                { f: 261.63, d: 0.55, t: 8.04, v: 0.26 },
+                { f: 523.25, d: 0.85, t: 8.38, v: 0.31 },
+                { f: 440.00, d: 0.85, t: 9.02, v: 0.29 },
+                { f: 349.23, d: 0.85, t: 9.66, v: 0.29 },
+                { f: 329.63, d: 0.85, t: 10.30, v: 0.29 },
+                { f: 293.66, d: 1.25, t: 10.94, v: 0.29 },
+
+                { f: 466.16, d: 0.55, t: 12.10, v: 0.27 },
+                { f: 466.16, d: 0.55, t: 12.44, v: 0.27 },
+                { f: 440.00, d: 0.85, t: 12.78, v: 0.29 },
+                { f: 349.23, d: 0.85, t: 13.42, v: 0.29 },
+                { f: 392.00, d: 0.85, t: 14.06, v: 0.29 },
+                { f: 349.23, d: 1.60, t: 14.70, v: 0.31 }
+            ];
+
+            const startTime = audioCtx.currentTime + 0.08;
+            const totalDurationMs = 17200;
+
+            notes.forEach(n => {
+                playSoftPianoNote(n.f, n.d, startTime + n.t, n.v);
+            });
+
+            melodyTimeout = setTimeout(() => {
+                if (isPlaying) startBirthdayMelody();
+            }, totalDurationMs);
+        }
+
+        function togglePiano() {
+            if (isPlaying) {
+                isPlaying = false;
+                clearTimeout(melodyTimeout);
+                document.getElementById('musicBtn').innerText = "🎹 تشغيل موسيقى البيانو";
+            } else {
+                startBirthdayMelody();
+            }
+        }
+
+        // إطفاء الشموع
+        function blowOut(candleElement) {
+            if (!isPlaying) {
+                startBirthdayMelody();
+            }
+            const flame = candleElement.querySelector('.flame');
+            if (flame && !flame.classList.contains('out')) {
+                flame.classList.add('out');
+                candlesLeft--;
+                if (candlesLeft === 0) {
+                    const wishBox = document.getElementById('cakeWishBox');
+                    if (wishBox) wishBox.classList.add('show');
+                    dropVintagePetals(40);
+                }
+            }
+        }
+
+        // الانتقال من الكيكة إلى المظروف
+        function goToEnvelope() {
+            document.getElementById('cakeSection').classList.add('hidden');
+            document.getElementById('envelopeSection').classList.remove('hidden');
+        }
+
+        // العودة إلى الكيكة
+        function goToCake() {
+            document.getElementById('envelopeSection').classList.add('hidden');
+            document.getElementById('cakeSection').classList.remove('hidden');
+        }
+
+        // فتح المظروف وإظهار الرسالة الكاملة
+        function openEnvelope() {
+            const wrapper = document.getElementById('envelopeWrapper');
+            if (wrapper && !wrapper.classList.contains('open')) {
+                wrapper.classList.add('open');
+                setTimeout(() => {
+                    wrapper.classList.add('hidden');
+                    const hint = document.getElementById('envelopeHint');
+                    if (hint) hint.classList.add('hidden');
+                    const letter = document.getElementById('fullLetter');
+                    if (letter) letter.classList.remove('hidden');
+                    dropVintagePetals(35);
+                }, 650);
+            }
+        }
+
+        // تساقط الورود والزينة
+        function dropVintagePetals(count) {
+            const items = ['🌸', '🤍', '✨', '🌷'];
+            for (let i = 0; i < count; i++) {
+                const petal = document.createElement('div');
+                petal.classList.add('petal');
+                petal.innerText = items[Math.floor(Math.random() * items.length)];
+                petal.style.left = Math.random() * 100 + 'vw';
+                petal.style.fontSize = (Math.random() * 12 + 12) + 'px';
+                petal.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                petal.style.opacity = Math.random() * 0.6 + 0.4;
+                document.body.appendChild(petal);
+                setTimeout(() => petal.remove(), 6000);
+            }
+        }
+
+        window.onload = () => dropVintagePetals(18);
+
+    </script>
+</body>
+</html>
