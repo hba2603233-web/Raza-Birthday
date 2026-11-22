@@ -410,6 +410,9 @@
 
         <!-- ================= القسم 1: الكيكة ================= -->
         <div id="cakeSection">
+            <p style="font-size: 1.05rem; letter-spacing: 3px; opacity: 0.78; margin-top: -6px; margin-bottom: 18px; font-style: italic;">
+    ✿ 23 November ✿
+</p>
             <h1 class="eng-title">Happy Birthday, Raza</h1>
             <p class="ar-subtitle">تمنّي أمنية جميلة واضغطي على الشموع لإطفائها 🕯️</p>
 
@@ -500,8 +503,8 @@
         </div>
     </div>
 
-    <script>
-        
+    
+        <script>
         let candlesLeft = 3;
         let audioCtx = null;
         let isPlaying = false;
@@ -546,7 +549,6 @@
             overtone.stop(time + duration + 0.04);
         }
 
-        
         function startBirthdayMelody() {
             if (!audioCtx) {
                 audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -673,7 +675,7 @@
         }
 
         window.onload = () => dropVintagePetals(18);
-
     </script>
+    
 </body>
 </html>
